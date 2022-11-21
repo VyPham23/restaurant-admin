@@ -1,0 +1,54 @@
+.form__container{
+    
+    box-sizing: border-box;
+    
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+form{
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    width: 50%;
+    margin: auto;
+}
+
+.form__section{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    outline: 0;
+    border: solid #000000 2px;
+}
+
+.form__input {
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: #ffd71b;
+    border: 2px solid #ffd71b;
+    color: #111;
+    font-size: 13px;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    padding: 11px 40px;
+    position: relative;
+    font-weight: 700;
+    cursor: pointer;
+    outline: 0;
+}
