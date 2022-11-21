@@ -6,6 +6,7 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import Admin from "../Admin/Admin";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
@@ -64,8 +65,8 @@ const Sidebar = () => {
         ))}
       </div>
     </div>
-    <div className="m-3 text-xl text-gray-900 font-semibold">
-      REACT TAILWIND
+    <div className="m-3 w-full text-xl text-gray-900 font-semibold">
+      <Admin/>
     </div>
   </section>
   );
