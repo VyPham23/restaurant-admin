@@ -1,12 +1,16 @@
-import React from 'react';
-import Admin from './components/Admin/Admin';
-
-
+import React from "react";
+import Admin from "./components/Admin/Admin";
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import Sidebar from "./components/Sidebar/Sidebar";
 function App() {
   return (
-    <div className="App">
-      <Admin />
-    </div>
+    <BrowserRouter>
+      <Sidebar/>
+      <Routes>
+        <Route path="/" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
