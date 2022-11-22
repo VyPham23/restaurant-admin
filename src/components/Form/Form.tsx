@@ -51,8 +51,10 @@ const Form = () => {
                 <div className='form__section'>
                     <label>Ingredients:</label><br/>
                     <input {...register("ingredient")} className='form__input' type="text" placeholder="Ingredient"/>
-                    <input {...register("ingredient")} className='form__input' type="text" placeholder="Ingredient"/>
-                    <button onClick={addInput}>+</button>
+                </div>
+
+                <div>
+                    <button onClick={addInput}>Add Ingredient</button>
                 </div>
 
                 <div className='form__section'>
