@@ -1,22 +1,18 @@
-.form__container{
-
-    box-sizing: border-box;
-
-}
-
-h2 {
+#formtitle {
     font-size: 30px;
     line-height: 1.75em;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 15px;
+    padding-top: 15px;
 }
+
+
 
 form{
     font-size: 15px;
     line-height: 27px;
     font-weight: 400;
-    width: 50%;
+    width: 40vw;
     margin: auto;
 }
 
@@ -28,18 +24,15 @@ form{
     margin-inline-end: 0px;
 }
 
-input{
+.form__input {
+    margin-bottom: 10px;
     width: 100%;
     padding: 12px;
     outline: 0;
     border: solid #000000 2px;
 }
 
-.form__input {
-    margin-bottom: 10px;
-}
-
-button{
+#form__btn {
     background-color: #ffd71b;
     border: 2px solid #ffd71b;
     color: #111;
@@ -50,5 +43,5 @@ button{
     position: relative;
     font-weight: 700;
     cursor: pointer;
-    outline: 0;
+    border-radius: 5px;
 }

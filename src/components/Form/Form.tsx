@@ -69,7 +69,7 @@ import React from 'react';
                      <input {...register("price")} className='form__input' type="number" min="0" placeholder="Price" name="price" required />
                  </div>
                  <div>
-                     <button type="submit">Save</button>
+                     <button type="submit" id="form__btn">Save</button>
                  </div>
              </form>
          </div>
