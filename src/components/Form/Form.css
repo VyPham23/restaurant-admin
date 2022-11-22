@@ -6,14 +6,25 @@
     padding-top: 15px;
 }
 
+.form__container {
+    position: relative;
+    left: 40px;
+}
 
+.form__main {
+    display: flex;
+}
 
 form{
     font-size: 15px;
     line-height: 27px;
     font-weight: 400;
-    width: 40vw;
     margin: auto;
+}
+
+.form__part {
+    width: 30vw;
+    margin-right: 40px;
 }
 
 .form__section{
