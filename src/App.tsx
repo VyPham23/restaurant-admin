@@ -14,7 +14,7 @@ function App() {
         <Sidebar/>
         <Routes>
           <Route path="/" element={<Admin />} />
-          <Route path="/form" element={<Form />}></Route>
+          <Route path="/form" element={<Form />}/>
         </Routes>
       </Router>
     </React.StrictMode>
