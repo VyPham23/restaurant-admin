@@ -1,18 +1,22 @@
 import React from "react";
-import Admin from "./components/Admin/Admin";
-import { Route, Router, Routes } from "react-router";
-import { BrowserRouter } from "react-router-dom";
-import Sidebar from "./components/Sidebar/Sidebar";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import { Admin, Form, Sidebar } from "./components";
 
 function App() {
   return (
     <React.StrictMode>
-      <BrowserRouter>
-      <Sidebar/>
-      <Routes>
-      <Route path="/" element={<Admin />} />
-      </Routes>
-      </BrowserRouter>
+      <Router>
+        <Sidebar/>
+        <Routes>
+          <Route path="/" element={<Admin />} />
+          <Route path="/form" element={<Form />}></Route>
+        </Routes>
+      </Router>
     </React.StrictMode>
   );
 }

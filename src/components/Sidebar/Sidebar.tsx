@@ -11,19 +11,13 @@ import Admin from "../Admin/Admin";
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const menus = [
-    { name: "dashboard", link: "/", icon: MdOutlineDashboard },
-    { name: "user", link: "/user", icon: AiOutlineUser },
-    { name: "messages", link: "/messages", icon: FiMessageSquare },
-    { name: "analytics", link: "/analyntics", icon: TbReportAnalytics, margin: true },
-    { name: "File Manager", link: "/file", icon: FiFolder },
-    { name: "Cart", link: "/cart", icon: FiShoppingCart },
-    { name: "Saved", link: "/saved", icon: AiOutlineHeart, margin: true },
-    { name: "Setting", link: "/setting", icon: RiSettings4Line },
+    { name: "Dashboard", link: "/", icon: MdOutlineDashboard },
+    { name: "User", link: "/user", icon: AiOutlineUser },
+    { name: "Add food", link: "/form", icon: FiMessageSquare },
   ];
   return (
-    <section className="flex gap-6">
     <div
-      className={`bg-[#0e0e0e] min-h-screen ${
+      className={`bg-[#0e0e0e] float-left min-h-screen ${
         open ? "w-72" : "w-16"
       } duration-500 text-gray-100 px-4`}
     >
@@ -39,8 +33,7 @@ const Sidebar = () => {
           <Link
             to={menu?.link}
             key={i}
-            className={` ${
-              menu?.margin && "mt-5"
+            className={`"mt-5"
             } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
           >
             <div>{React.createElement(menu?.icon, { size: "20" })}</div>
@@ -65,10 +58,6 @@ const Sidebar = () => {
         ))}
       </div>
     </div>
-    <div className="m-3 w-full text-xl text-gray-900 font-semibold">
-      <Admin/>
-    </div>
-  </section>
   );
 };
 
