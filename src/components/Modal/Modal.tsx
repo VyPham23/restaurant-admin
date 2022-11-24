@@ -1,39 +1,46 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import './Modal.css';
+import React from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
-function InputModal() {
-  const [show, setShow] = useState(false);
+export default function Modal() {
+  const [open, setOpen] = React.useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+    <div>
+      <Button variant="outlined" onClick={handleClickOpen}>
+        Edit
       </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Update Info</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            Type to update <br />
-            <input type="text" />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Edit</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Enter below:
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            fullWidth
+            variant="standard"
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleClose}>Save</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
   );
 }
-
-export default InputModal;
